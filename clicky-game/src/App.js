@@ -10,7 +10,8 @@ class App extends React.Component{
 render(){
   return (
 <div>
-<Jumbotron/>
+ <Jumbotron/>
+    <div className="wrapper">
       {this.state.emojis.map(emoji => (
         <EmojiCard
         key={emoji.id}
@@ -18,7 +19,7 @@ render(){
         image={emoji.image}
       />
       ))}
-    
+    </div>
 </div>
 
   );
