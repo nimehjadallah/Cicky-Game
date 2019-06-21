@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import Jumbotron from "./components/Jumbotron";
+import EmojiCard from "./components/EmojiCard";
+import emojis from "./emojis.json"
 import './App.css';
 
-function App() {
+class App extends React.Component{
+  state = {emojis};
+
+render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div>
+<Jumbotron/>
+      {this.state.emojis.map(emoji => (
+        <EmojiCard
+        key={emoji.id}
+        id = {emoji.id}
+        image={emoji.image}
+      />
+      ))}
+    
+</div>
+
   );
 }
+}
+
 
 export default App;
+
