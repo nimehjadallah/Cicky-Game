@@ -1,1 +1,1 @@
-# Cicky-Game
+# Clicky-Game
