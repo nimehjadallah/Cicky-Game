@@ -1,7 +1,9 @@
+
 .header{
-	background-color: #ccc;
+	background-image: url("../../images/gaming-pattern.png");
 	position: relative;
 	width: 100%;
+	
 }
 
 h1{
